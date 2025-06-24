@@ -25,11 +25,17 @@ body {
     flex-direction: column;
 }
 
+.flag-banner {
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 2px solid #b91c1c;
+}
+
 .flag-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid #b91c1c; /* Red Border */
+    height: 100px;
+    width: auto;
+    display: inline-block;
 }
 
 .chat-header {
