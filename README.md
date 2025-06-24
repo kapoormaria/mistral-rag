@@ -1,71 +1,98 @@
-# RAG Chatbot with Mistral AI
+Ask the Constitution: RAG Chatbot Powered by Mistral AI
+A Retrieval-Augmented Generation (RAG) chatbot built with Flask and Mistral AI, designed to help users ask detailed questions about the United States Constitution.
 
-A Retrieval-Augmented Generation (RAG) chatbot built with Flask and Mistral AI.
+Whether you're a student, educator, researcher, or just curious about constitutional law, this tool helps surface relevant parts of the U.S. Constitution in response to your queries—instantly.
 
-**Created by [Halim Madi](https://www.halimmadi.com)**
+🔍 What It Does
+This chatbot allows users to interactively ask questions about the U.S. Constitution. It:
 
-This is a sample project designed for students, workshops, and educational purposes. Feel free to use, modify, and distribute this code as you wish for learning and development.
+Uses RAG techniques to pull relevant text chunks from the Constitution
 
-## About the Creator
+Feeds them to Mistral AI for context-aware answers
 
-- **Website**: [www.halimmadi.com](https://www.halimmadi.com)
-- **Instagram**: [@yalla_halim](https://www.instagram.com/yalla_halim/)
+Provides a simple, intuitive web interface via Flask
 
-## Setup
+Ask questions like:
 
+"What does the Constitution say about freedom of speech?"
+
+"How is the President elected?"
+
+"What are the powers of Congress?"
+
+🚀 Getting Started
 1. Clone the repository
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Create a `.env` file with your Mistral API key:
-   ```
-   MISTRAL_API_KEY=your_api_key_here
-   ```
-5. Add your text file as `essay.txt` in the project root
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/us-constitution-rag.git
+cd us-constitution-rag
+2. Create a virtual environment
+bash
+Copy
+Edit
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+4. Add your Mistral API key
+Create a .env file in the root directory:
 
-## Local Development
+ini
+Copy
+Edit
+MISTRAL_API_KEY=your_api_key_here
+5. Add the U.S. Constitution text
+Place the source text (e.g. us_constitution.txt) in the project root and rename it to:
 
-Run the Flask application:
-```bash
+Copy
+Edit
+essay.txt
+🧪 Local Development
+Run the Flask app:
+
+bash
+Copy
+Edit
 python app.py
-```
+Visit the chatbot at: http://localhost:5001
 
-The application will be available at `http://localhost:5001`
+🌍 Deployment to Vercel
+Push your repo to GitHub
 
-## Deployment to Vercel
+Link it to Vercel
 
-1. Push your code to GitHub
-2. Connect your GitHub repository to Vercel
-3. Add your environment variables in the Vercel dashboard:
-   - `MISTRAL_API_KEY`: Your Mistral API key
-4. Deploy!
+In Vercel settings, add your environment variable:
 
-## Environment Variables
+MISTRAL_API_KEY: your API key
 
-- `MISTRAL_API_KEY`: Your Mistral AI API key (required)
+Deploy!
 
-## Project Structure
+🔧 Project Structure
+bash
+Copy
+Edit
+├── app.py              # Main Flask application
+├── essay.txt           # Text source (U.S. Constitution)
+├── templates/          # HTML templates
+├── static/             # Static assets (CSS, JS)
+├── requirements.txt    # Python dependencies
+├── vercel.json         # Deployment configuration
+└── .env                # Environment variables
+📘 License and Attribution
+This project is based on the educational template by Halim Madi, modified and adapted for constitutional education and RAG experimentation.
 
-- `app.py`: Main Flask application
-- `templates/`: HTML templates
-- `static/`: Static files (CSS, JS)
-- `essay.txt`: Source text for the RAG system
-- `requirements.txt`: Python dependencies
-- `vercel.json`: Vercel deployment configuration
+You're welcome to:
 
-## Usage and Licensing
+Use it for learning and teaching
 
-This project is provided as a learning resource for students and workshop participants. You are free to:
+Adapt it for other public documents
 
-- Use this code for educational purposes
-- Modify and adapt it for your own projects
-- Share it with others for learning
-- Use it in workshops and tutorials
+Extend or integrate it with other RAG workflows
 
-Feel free to reach out to [Halim Madi](https://www.halimmadi.com) with any questions or feedback! 
+🤝 Contributions Welcome
+Pull requests and improvements are welcome! Got a feature idea or want to improve document handling? Fork the repo and open a PR.
+
