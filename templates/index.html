@@ -30,16 +30,16 @@
     <script>
         document.getElementById('chat-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             const userInput = document.getElementById('user-input');
             const question = userInput.value;
             const submitButton = e.target.querySelector('button');
-            
+
             submitButton.disabled = true;
-            
+
             addMessage(question, 'user');
             userInput.value = '';
-            
+
             try {
                 const response = await fetch('/ask', {
                     method: 'POST',
@@ -48,15 +48,15 @@
                     },
                     body: JSON.stringify({ question: question })
                 });
-                
+
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
                 }
-                
+
                 const data = await response.json();
                 addMessage(data.answer, 'bot');
-                
+
                 if (data.context && data.context.length > 0) {
                     addMessage('Context used:', 'system');
                     data.context.forEach((chunk, index) => {
