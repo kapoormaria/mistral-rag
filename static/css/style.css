@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #2563eb;
+    color: #1e3a8a; /* Navy Blue */
 }
 
 .chat-container {
@@ -20,16 +20,24 @@ body {
     max-width: 800px;
     height: 90vh;
     background-color: white;
-    border: 2px solid #2563eb;
+    border: 2px solid #1e3a8a;
     display: flex;
     flex-direction: column;
 }
 
+.flag-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #b91c1c; /* Red Border */
+}
+
 .chat-header {
     padding: 20px;
-    background-color: #2563eb;
+    background-color: #1e3a8a;
     color: white;
-    border-bottom: 2px solid #2563eb;
+    border-bottom: 2px solid #b91c1c;
+    text-align: center;
 }
 
 .chat-header h1 {
@@ -51,33 +59,33 @@ body {
     padding: 10px 15px;
     max-width: 80%;
     word-wrap: break-word;
-    border: 1px solid #2563eb;
+    border: 1px solid #1e3a8a;
 }
 
 .message.user {
-    background-color: #2563eb;
+    background-color: #b91c1c;
     color: white;
     margin-left: auto;
 }
 
 .message.bot {
     background-color: white;
-    color: #2563eb;
+    color: #1e3a8a;
     margin-right: auto;
-    border: 1px solid #2563eb;
+    border: 1px solid #1e3a8a;
 }
 
 .message.system {
     background-color: white;
-    color: #2563eb;
+    color: #1e3a8a;
     font-size: 0.9em;
-    border: 1px dashed #2563eb;
+    border: 1px dashed #1e3a8a;
     margin: 10px auto;
     max-width: 90%;
 }
 
 .message.error {
-    background-color: #2563eb;
+    background-color: #b91c1c;
     color: white;
     margin: 10px auto;
     max-width: 90%;
@@ -85,7 +93,7 @@ body {
 
 .chat-input {
     padding: 20px;
-    border-top: 2px solid #2563eb;
+    border-top: 2px solid #1e3a8a;
     background-color: white;
 }
 
@@ -97,7 +105,7 @@ body {
 #user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #2563eb;
+    border: 1px solid #1e3a8a;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
     background-color: white;
@@ -105,9 +113,9 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #2563eb;
+    background-color: #1e3a8a;
     color: white;
-    border: 1px solid #2563eb;
+    border: 1px solid #1e3a8a;
     cursor: pointer;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
@@ -117,7 +125,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: #2563eb;
+    color: #1e3a8a;
 }
 
 button:disabled {
@@ -126,21 +134,20 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Custom scrollbar for retro feel */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
     background: white;
-    border: 1px solid #2563eb;
+    border: 1px solid #1e3a8a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2563eb;
-    border: 1px solid #2563eb;
+    background: #1e3a8a;
+    border: 1px solid #1e3a8a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #1d4ed8;
-} 
+    background: #1e40af;
+}
